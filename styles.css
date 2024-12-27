@@ -1,0 +1,43 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif; /* Or your preferred font */
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Viewport height */
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  /* Main Content Styles */
+  main {
+    flex-grow: 1; /* Allow main content to take up remaining space */
+    padding: 1rem;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: relative; /* For sticky footer */
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Responsive Styles (Optional) */
+  @media (min-width: 768px) {
+    /* Adjust styles for larger screens here */
+  }
