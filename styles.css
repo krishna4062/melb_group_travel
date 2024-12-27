@@ -1,3 +1,54 @@
-.selector-for-some-widget {
-    box-sizing: content-box;
-  }
+/* style.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    overflow: hidden;
+}
+
+.logo {
+    float: left;
+    padding: 10px;
+}
+
+.logo img {
+    height: 50px; 
+}
+
+nav ul {
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 600px) {
+    nav ul {
+        float: none;
+        text-align: center;
+    }
+}
