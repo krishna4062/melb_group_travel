@@ -1,41 +1,305 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Active Adventures</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Active Adventures — Melbourne's wildest experiences</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-  <body>
-
-   <!--Navigation bar-->
-  <section id="navbar">
-
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"
-        style="background-color: transparent">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="./index.html">
-        <img src="AA.jpg" alt="Bootstrap" width="60" height="54"> Active Adventures </a>
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">ACTIVE<span>ADVENTURES</span></a>
+      <ul class="nav-links">
+        <li><a href="#events">Events</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#events" class="nav-cta">Book Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <ul class="nav justify-content-end">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"> About us </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"> Contact us </a>
-      </li>
-    </ul>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#events">Events</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
 
-  
-   
-   
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-overlay"></div>
+      <div class="terrain-lines"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Melbourne · Victoria · Australia</p>
+      <h1 class="hero-title">
+        PUSH YOUR<br/>
+        <span class="hero-accent">LIMITS.</span>
+      </h1>
+      <p class="hero-sub">Rock climbing, white-water rafting, trail running, abseiling — real adventures in and around Melbourne, for every skill level.</p>
+      <div class="hero-actions">
+        <a href="#events" class="btn-primary">Explore Events</a>
+        <a href="#about" class="btn-ghost">Our Story ↓</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">12+</span>
+        <span class="stat-label">Adventure types</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">3,400+</span>
+        <span class="stat-label">Adventurers guided</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Safety record</span>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
+  <!-- EVENTS -->
+  <section class="section events-section" id="events">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">What's on</p>
+        <h2 class="section-title">Upcoming Adventures</h2>
+        <p class="section-sub">From beginner-friendly day trips to multi-day expeditions. All equipment included, expert guides every time.</p>
+      </div>
 
-  </body>
+      <!-- Filter Buttons -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="climbing">Climbing</button>
+        <button class="filter-btn" data-filter="water">Water</button>
+        <button class="filter-btn" data-filter="trail">Trail</button>
+        <button class="filter-btn" data-filter="multi">Multi-Day</button>
+      </div>
+
+      <div class="events-grid" id="eventsGrid">
+        <!-- Cards injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about-section" id="about">
+    <div class="container about-inner">
+      <div class="about-visual">
+        <div class="about-img-block">
+          <div class="about-img-main"></div>
+          <div class="about-img-badge">
+            <span class="badge-num">2016</span>
+            <span class="badge-label">Est. Melbourne</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="section-eyebrow">About us</p>
+        <h2 class="section-title">Born on the<br/>Grampians cliff face</h2>
+        <p>Active Adventures started when two climbing guides decided Melbourne deserved better than tourist-trap day trips. We design routes and experiences that respect the land — and push the people on it.</p>
+        <p>Every guide on our team holds current Wilderness First Responder certification. We cap group sizes at 10 so every adventurer gets real attention. No filler, no fluff — just the outdoors, done properly.</p>
+        <ul class="about-pillars">
+          <li>
+            <div class="pillar-icon">⛰</div>
+            <div>
+              <strong>Expert-led</strong>
+              <p>All guides are certified WFR and industry professionals.</p>
+            </div>
+          </li>
+          <li>
+            <div class="pillar-icon">🌿</div>
+            <div>
+              <strong>Leave No Trace</strong>
+              <p>We operate under strict Leave No Trace principles on every route.</p>
+            </div>
+          </li>
+          <li>
+            <div class="pillar-icon">🤝</div>
+            <div>
+              <strong>Small groups</strong>
+              <p>Maximum 10 per group. You're never just a number with us.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">In the wild</p>
+        <h2 class="section-title">From the field</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item g-tall" style="background: linear-gradient(160deg,#1a3a2a,#0f2218);">
+          <div class="gallery-label">Grampians Cliffs</div>
+        </div>
+        <div class="gallery-item" style="background: linear-gradient(160deg,#1a2b3a,#0a1822);">
+          <div class="gallery-label">Yarra River Raft</div>
+        </div>
+        <div class="gallery-item" style="background: linear-gradient(160deg,#2a1a10,#150c05);">
+          <div class="gallery-label">Dandenong Trails</div>
+        </div>
+        <div class="gallery-item g-wide" style="background: linear-gradient(160deg,#1f2e1a,#0e1a0a);">
+          <div class="gallery-label">Alpine Abseiling</div>
+        </div>
+        <div class="gallery-item" style="background: linear-gradient(160deg,#2a1f10,#160e04);">
+          <div class="gallery-label">Mt Buller Ridge</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Adventurers say</p>
+        <h2 class="section-title">Real experiences</h2>
+      </div>
+      <div class="testimonials-track" id="testimonialsTrack">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"The Grampians climbing day was the most alive I've felt in years. The guides were incredible — challenging us just enough without ever feeling unsafe."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JR</div>
+            <div>
+              <strong>Jamie R.</strong>
+              <span>Melbourne CBD</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Booked the Yarra Valley trail run for my team's offsite. Absolute game-changer. 10 strangers went in, 10 friends came out. Can't recommend highly enough."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SK</div>
+            <div>
+              <strong>Sarah K.</strong>
+              <span>Fitzroy</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Did the multi-day alpine trek as a complete beginner. They equipped us properly, moved at a real pace, and the views were insane. Already booked my second trip."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MT</div>
+            <div>
+              <strong>Marco T.</strong>
+              <span>Collingwood</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-dots" id="testimonialDots"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT / CTA -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-cta">
+          <p class="section-eyebrow">Get in touch</p>
+          <h2 class="section-title">Ready to go?</h2>
+          <p>Questions about gear, fitness levels, or group bookings? We answer every message within 24 hours.</p>
+          <ul class="contact-details">
+            <li>📍 Melbourne, Victoria</li>
+            <li>📞 (03) 9XXX XXXX</li>
+            <li>✉️ hello@activeadventures.com.au</li>
+          </ul>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Your name</label>
+            <input type="text" id="name" placeholder="e.g. Alex Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" placeholder="alex@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="interest">I'm interested in</label>
+            <select id="interest">
+              <option value="">Choose an adventure type…</option>
+              <option>Rock climbing</option>
+              <option>White-water rafting</option>
+              <option>Trail running</option>
+              <option>Abseiling</option>
+              <option>Multi-day expedition</option>
+              <option>Corporate group booking</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="Tell us about your group, dates, fitness level…"></textarea>
+          </div>
+          <button type="submit" class="btn-primary form-submit">Send Enquiry</button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo">ACTIVE<span>ADVENTURES</span></div>
+        <p>Melbourne's home for real outdoor adventures. Guided, safe, unforgettable.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#events">All Events</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Adventures</h4>
+        <ul>
+          <li><a href="#">Rock Climbing</a></li>
+          <li><a href="#">Trail Running</a></li>
+          <li><a href="#">White-water Rafting</a></li>
+          <li><a href="#">Abseiling</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Follow us</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Strava</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Active Adventures Pty Ltd · Melbourne, Victoria · All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
 </html>
