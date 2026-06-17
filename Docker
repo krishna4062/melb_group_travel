@@ -1,0 +1,14 @@
+# 1. Start with a pre-configured environment that has Node.js installed
+FROM node:20
+
+# 2. Create a folder inside the container for our code
+WORKDIR /app
+
+# 3. Copy our application files into that folder
+COPY . .
+
+# 4. Install the app's dependencies inside the container
+RUN npm install
+
+# 5. Tell the container to start our application when it boots up
+CMD ["npm", "start"]
