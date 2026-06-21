@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Active Adventures — Melbourne's wildest experiences</title>
+  <title>Active Adventures — Adventure Events Across Australia</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -17,6 +17,7 @@
       <a href="#" class="logo">ACTIVE<span>ADVENTURES</span></a>
       <ul class="nav-links">
         <li><a href="#events">Events</a></li>
+        <li><a href="#locations">Locations</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -28,6 +29,7 @@
     </div>
     <div class="mobile-menu" id="mobileMenu">
       <a href="#events">Events</a>
+      <a href="#locations">Locations</a>
       <a href="#about">About</a>
       <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
@@ -41,25 +43,30 @@
       <div class="terrain-lines"></div>
     </div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Melbourne · Victoria · Australia</p>
+      <p class="hero-eyebrow">VIC · NSW · QLD · WA · SA · TAS · NT · ACT</p>
       <h1 class="hero-title">
-        PUSH YOUR<br/>
-        <span class="hero-accent">LIMITS.</span>
+        EXPLORE ALL<br/>
+        <span class="hero-accent">AUSTRALIA.</span>
       </h1>
-      <p class="hero-sub">Rock climbing, white-water rafting, trail running, abseiling — real adventures in and around Melbourne, for every skill level.</p>
+      <p class="hero-sub">Rock climbing, white-water rafting, trail running, diving, abseiling — real guided adventures in every state and territory, for every skill level.</p>
       <div class="hero-actions">
         <a href="#events" class="btn-primary">Explore Events</a>
-        <a href="#about" class="btn-ghost">Our Story ↓</a>
+        <a href="#locations" class="btn-ghost">All Locations ↓</a>
       </div>
     </div>
     <div class="hero-stats">
       <div class="stat">
-        <span class="stat-num">12+</span>
-        <span class="stat-label">Adventure types</span>
+        <span class="stat-num">8</span>
+        <span class="stat-label">States &amp; territories</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat">
-        <span class="stat-num">3,400+</span>
+        <span class="stat-num">40+</span>
+        <span class="stat-label">Adventures available</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">12,000+</span>
         <span class="stat-label">Adventurers guided</span>
       </div>
       <div class="stat-divider"></div>
@@ -74,6 +81,20 @@
     </div>
   </section>
 
+  <!-- LOCATIONS -->
+  <section class="section locations-section" id="locations">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Where we operate</p>
+        <h2 class="section-title">Every corner of Australia</h2>
+        <p class="section-sub">From the tropical reefs of Queensland to Tasmania's wild south — Active Adventures runs year-round experiences across all eight states and territories.</p>
+      </div>
+      <div class="locations-grid" id="locationsGrid">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
   <!-- EVENTS -->
   <section class="section events-section" id="events">
     <div class="container">
@@ -83,18 +104,31 @@
         <p class="section-sub">From beginner-friendly day trips to multi-day expeditions. All equipment included, expert guides every time.</p>
       </div>
 
-      <!-- Filter Buttons -->
+      <!-- State Tabs -->
+      <div class="city-tabs" id="stateTabs">
+        <button class="city-tab active" data-state="all">All States</button>
+        <button class="city-tab" data-state="vic">VIC</button>
+        <button class="city-tab" data-state="nsw">NSW</button>
+        <button class="city-tab" data-state="qld">QLD</button>
+        <button class="city-tab" data-state="wa">WA</button>
+        <button class="city-tab" data-state="sa">SA</button>
+        <button class="city-tab" data-state="tas">TAS</button>
+        <button class="city-tab" data-state="nt">NT</button>
+        <button class="city-tab" data-state="act">ACT</button>
+      </div>
+
+      <!-- Type Filter -->
       <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn active" data-filter="all">All Types</button>
         <button class="filter-btn" data-filter="climbing">Climbing</button>
         <button class="filter-btn" data-filter="water">Water</button>
         <button class="filter-btn" data-filter="trail">Trail</button>
+        <button class="filter-btn" data-filter="cycling">Cycling</button>
+        <button class="filter-btn" data-filter="diving">Diving</button>
         <button class="filter-btn" data-filter="multi">Multi-Day</button>
       </div>
 
-      <div class="events-grid" id="eventsGrid">
-        <!-- Cards injected by JS -->
-      </div>
+      <div class="events-grid" id="eventsGrid"></div>
     </div>
   </section>
 
@@ -114,7 +148,7 @@
         <p class="section-eyebrow">About us</p>
         <h2 class="section-title">Born on the<br/>Grampians cliff face</h2>
         <p>Active Adventures started when two climbing guides decided Melbourne deserved better than tourist-trap day trips. We design routes and experiences that respect the land — and push the people on it.</p>
-        <p>Every guide on our team holds current Wilderness First Responder certification. We cap group sizes at 10 so every adventurer gets real attention. No filler, no fluff — just the outdoors, done properly.</p>
+        <p>Now operating across all eight states and territories, we bring the same no-nonsense approach to every corner of Australia — from the Red Centre to the Tasmanian wilderness, from the Great Barrier Reef to the Blue Mountains.</p>
         <ul class="about-pillars">
           <li>
             <div class="pillar-icon">⛰</div>
@@ -137,6 +171,13 @@
               <p>Maximum 10 per group. You're never just a number with us.</p>
             </div>
           </li>
+          <li>
+            <div class="pillar-icon">🗺</div>
+            <div>
+              <strong>Nationwide reach</strong>
+              <p>8 states and territories. One consistent standard of excellence.</p>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
@@ -149,22 +190,22 @@
         <p class="section-eyebrow">In the wild</p>
         <h2 class="section-title">From the field</h2>
       </div>
+      <div class="gallery-filter">
+        <button class="gallery-tab active" data-gcity="all">All</button>
+        <button class="gallery-tab" data-gcity="vic">VIC</button>
+        <button class="gallery-tab" data-gcity="nsw">NSW</button>
+        <button class="gallery-tab" data-gcity="qld">QLD</button>
+        <button class="gallery-tab" data-gcity="wa">WA</button>
+        <button class="gallery-tab" data-gcity="tas">TAS</button>
+        <button class="gallery-tab" data-gcity="nt">NT</button>
+      </div>
       <div class="gallery-grid">
-        <div class="gallery-item g-tall" style="background: linear-gradient(160deg,#1a3a2a,#0f2218);">
-          <div class="gallery-label">Grampians Cliffs</div>
-        </div>
-        <div class="gallery-item" style="background: linear-gradient(160deg,#1a2b3a,#0a1822);">
-          <div class="gallery-label">Yarra River Raft</div>
-        </div>
-        <div class="gallery-item" style="background: linear-gradient(160deg,#2a1a10,#150c05);">
-          <div class="gallery-label">Dandenong Trails</div>
-        </div>
-        <div class="gallery-item g-wide" style="background: linear-gradient(160deg,#1f2e1a,#0e1a0a);">
-          <div class="gallery-label">Alpine Abseiling</div>
-        </div>
-        <div class="gallery-item" style="background: linear-gradient(160deg,#2a1f10,#160e04);">
-          <div class="gallery-label">Mt Buller Ridge</div>
-        </div>
+        <div class="gallery-item g-tall" data-gcity="vic" style="background:linear-gradient(160deg,#1a3a2a,#0f2218)"><div class="gallery-label">Grampians · VIC</div></div>
+        <div class="gallery-item" data-gcity="nsw" style="background:linear-gradient(160deg,#1a2b3a,#0a1822)"><div class="gallery-label">Blue Mountains · NSW</div></div>
+        <div class="gallery-item" data-gcity="qld" style="background:linear-gradient(160deg,#0d2a2a,#061515)"><div class="gallery-label">Great Barrier Reef · QLD</div></div>
+        <div class="gallery-item g-wide" data-gcity="nt" style="background:linear-gradient(160deg,#2a1a10,#150c05)"><div class="gallery-label">Uluru Red Centre · NT</div></div>
+        <div class="gallery-item" data-gcity="tas" style="background:linear-gradient(160deg,#1a2535,#0d1520)"><div class="gallery-label">Cradle Mountain · TAS</div></div>
+        <div class="gallery-item" data-gcity="wa" style="background:linear-gradient(160deg,#2a2010,#160f04)"><div class="gallery-label">Stirling Range · WA</div></div>
       </div>
     </div>
   </section>
@@ -176,58 +217,69 @@
         <p class="section-eyebrow">Adventurers say</p>
         <h2 class="section-title">Real experiences</h2>
       </div>
-      <div class="testimonials-track" id="testimonialsTrack">
+      <div class="testimonials-track">
         <div class="testimonial-card">
           <div class="stars">★★★★★</div>
+          <p class="city-tag-pill mel-pill">Victoria</p>
           <p>"The Grampians climbing day was the most alive I've felt in years. The guides were incredible — challenging us just enough without ever feeling unsafe."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">JR</div>
-            <div>
-              <strong>Jamie R.</strong>
-              <span>Melbourne CBD</span>
-            </div>
-          </div>
+          <div class="testimonial-author"><div class="author-avatar">JR</div><div><strong>Jamie R.</strong><span>Melbourne CBD</span></div></div>
         </div>
         <div class="testimonial-card">
           <div class="stars">★★★★★</div>
-          <p>"Booked the Yarra Valley trail run for my team's offsite. Absolute game-changer. 10 strangers went in, 10 friends came out. Can't recommend highly enough."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">SK</div>
-            <div>
-              <strong>Sarah K.</strong>
-              <span>Fitzroy</span>
-            </div>
-          </div>
+          <p class="city-tag-pill per-pill">Queensland</p>
+          <p>"Diving the Great Barrier Reef with Active Adventures was flawless. Small group, world-class instructors, and we saw a manta ray on the first dive. Unreal."</p>
+          <div class="testimonial-author"><div class="author-avatar">AL</div><div><strong>Aisha L.</strong><span>Brisbane</span></div></div>
         </div>
         <div class="testimonial-card">
           <div class="stars">★★★★★</div>
-          <p>"Did the multi-day alpine trek as a complete beginner. They equipped us properly, moved at a real pace, and the views were insane. Already booked my second trip."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">MT</div>
-            <div>
-              <strong>Marco T.</strong>
-              <span>Collingwood</span>
-            </div>
-          </div>
+          <p class="city-tag-pill per-pill">Tasmania</p>
+          <p>"The Cradle Mountain multi-day walk was transformative. Rugged, beautiful, and superbly guided. Tasmania is unlike anywhere else on earth."</p>
+          <div class="testimonial-author"><div class="author-avatar">TN</div><div><strong>Tom N.</strong><span>Hobart</span></div></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="city-tag-pill mel-pill">New South Wales</p>
+          <p>"The Blue Mountains abseil was my first time on a rope and I felt completely safe the whole time. Already booked the canyoning trip for next month."</p>
+          <div class="testimonial-author"><div class="author-avatar">SK</div><div><strong>Sarah K.</strong><span>Sydney</span></div></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="city-tag-pill per-pill">Northern Territory</p>
+          <p>"Hiking around Uluru at sunrise with a local guide was deeply moving. The cultural context they provided made it so much more than just a walk."</p>
+          <div class="testimonial-author"><div class="author-avatar">BW</div><div><strong>Ben W.</strong><span>Darwin</span></div></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="city-tag-pill mel-pill">Western Australia</p>
+          <p>"The Rottnest kayak tour was perfect — quokka sightings, clear water snorkelling, and the most attentive guides I've ever had. Worth every cent."</p>
+          <div class="testimonial-author"><div class="author-avatar">MT</div><div><strong>Marco T.</strong><span>Perth</span></div></div>
         </div>
       </div>
-      <div class="testimonial-dots" id="testimonialDots"></div>
     </div>
   </section>
 
-  <!-- CONTACT / CTA -->
+  <!-- CONTACT -->
   <section class="section contact-section" id="contact">
     <div class="container">
       <div class="contact-inner">
         <div class="contact-cta">
           <p class="section-eyebrow">Get in touch</p>
           <h2 class="section-title">Ready to go?</h2>
-          <p>Questions about gear, fitness levels, or group bookings? We answer every message within 24 hours.</p>
+          <p>Questions about gear, fitness levels, or group bookings? We answer every message within 24 hours — no matter which state you're in.</p>
           <ul class="contact-details">
-            <li>📍 Shanny</li>
-            <li>📞 (+61) 9XXX XXXX</li>
+            <li>📍 Nationwide — all states &amp; territories</li>
+            <li>📞 1800 ACTIVE (1800 228 483)</li>
             <li>✉️ hello@activeadventures.com.au</li>
           </ul>
+          <div class="state-offices">
+            <p class="offices-label">State offices</p>
+            <div class="offices-grid">
+              <span>Melbourne (HQ)</span><span>Sydney</span>
+              <span>Brisbane</span><span>Perth</span>
+              <span>Adelaide</span><span>Hobart</span>
+              <span>Darwin</span><span>Canberra</span>
+            </div>
+          </div>
         </div>
         <form class="contact-form" id="contactForm">
           <div class="form-group">
@@ -239,14 +291,23 @@
             <input type="email" id="email" placeholder="alex@example.com" required />
           </div>
           <div class="form-group">
+            <label for="stateSelect">Your state / territory</label>
+            <select id="stateSelect">
+              <option value="">Select a state…</option>
+              <option>Victoria</option><option>New South Wales</option>
+              <option>Queensland</option><option>Western Australia</option>
+              <option>South Australia</option><option>Tasmania</option>
+              <option>Northern Territory</option><option>ACT</option>
+            </select>
+          </div>
+          <div class="form-group">
             <label for="interest">I'm interested in</label>
             <select id="interest">
               <option value="">Choose an adventure type…</option>
-              <option>Rock climbing</option>
-              <option>White-water rafting</option>
-              <option>Trail running</option>
-              <option>Abseiling</option>
-              <option>Multi-day expedition</option>
+              <option>Rock climbing</option><option>White-water rafting</option>
+              <option>Trail running</option><option>Abseiling / Canyoning</option>
+              <option>Kayaking</option><option>Scuba diving / Snorkelling</option>
+              <option>Cycling</option><option>Multi-day expedition</option>
               <option>Corporate group booking</option>
             </select>
           </div>
@@ -266,12 +327,13 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <div class="logo">ACTIVE<span>ADVENTURES</span></div>
-        <p>Melbourne's home for real outdoor adventures. Guided, safe, unforgettable.</p>
+        <p>Australia's home for real outdoor adventures. Guided, safe, unforgettable — in every state and territory.</p>
       </div>
       <div class="footer-links">
         <h4>Explore</h4>
         <ul>
           <li><a href="#events">All Events</a></li>
+          <li><a href="#locations">Locations</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -283,7 +345,19 @@
           <li><a href="#">Rock Climbing</a></li>
           <li><a href="#">Trail Running</a></li>
           <li><a href="#">White-water Rafting</a></li>
-          <li><a href="#">Abseiling</a></li>
+          <li><a href="#">Scuba Diving</a></li>
+          <li><a href="#">Multi-Day Treks</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>States</h4>
+        <ul>
+          <li><a href="#">Victoria</a></li>
+          <li><a href="#">New South Wales</a></li>
+          <li><a href="#">Queensland</a></li>
+          <li><a href="#">Western Australia</a></li>
+          <li><a href="#">Tasmania</a></li>
+          <li><a href="#">Northern Territory</a></li>
         </ul>
       </div>
       <div class="footer-links">
@@ -292,11 +366,12 @@
           <li><a href="#">Instagram</a></li>
           <li><a href="#">Facebook</a></li>
           <li><a href="#">Strava</a></li>
+          <li><a href="#">YouTube</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 Active Adventures Pty Ltd · Melbourne, Victoria · All rights reserved</p>
+      <p>© 2025 Active Adventures Pty Ltd · Nationwide, Australia · All rights reserved</p>
     </div>
   </footer>
 
